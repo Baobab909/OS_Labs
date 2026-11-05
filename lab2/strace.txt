@@ -1,0 +1,154 @@
+1099  execve("./parent", ["./parent"], 0xfffff6e437e8 /* 8 vars */) = 0
+1099  brk(NULL)                         = 0xaaaaee07e000
+1099  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffb30a7000
+1099  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1099  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1099  fstat(3, {st_mode=S_IFREG|0644, st_size=8407, ...}) = 0
+1099  mmap(NULL, 8407, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffb30a4000
+1099  close(3)                          = 0
+1099  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1099  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+1099  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+1099  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xffffb2ea0000
+1099  mmap(0xffffb2ea0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffffb2ea0000
+1099  munmap(0xffffb305e000, 65424)     = 0
+1099  mprotect(0xffffb303a000, 77824, PROT_NONE) = 0
+1099  mmap(0xffffb304d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xffffb304d000
+1099  mmap(0xffffb3052000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffb3052000
+1099  close(3)                          = 0
+1099  set_tid_address(0xffffb30a7fb0)   = 1099
+1099  set_robust_list(0xffffb30a7fc0, 24) = 0
+1099  rseq(0xffffb30a8600, 0x20, 0, 0xd428bc00) = 0
+1099  mprotect(0xffffb304d000, 12288, PROT_READ) = 0
+1099  mprotect(0xaaaabbf2f000, 4096, PROT_READ) = 0
+1099  mprotect(0xffffb30ac000, 8192, PROT_READ) = 0
+1099  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1099  munmap(0xffffb30a4000, 8407)      = 0
+1099  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+1099  getrandom("\xab\x93\x8a\x9e\xf9\x18\x5d\x86", 8, GRND_NONBLOCK) = 8
+1099  brk(NULL)                         = 0xaaaaee07e000
+1099  brk(0xaaaaee09f000)               = 0xaaaaee09f000
+1099  write(1, "enter filename: ", 16)  = 16
+1099  fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+1099  read(0, "result_linux.txt\n", 1024) = 17
+1099  pipe2([3, 4], 0)                  = 0
+1099  pipe2([5, 6], 0)                  = 0
+1099  rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTART}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+1099  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xffffb30a7fb0) = 1100
+1099  close(3 <unfinished ...>
+1100  set_robust_list(0xffffb30a7fc0, 24 <unfinished ...>
+1099  <... close resumed>)              = 0
+1100  <... set_robust_list resumed>)    = 0
+1099  close(6 <unfinished ...>
+1100  close(4 <unfinished ...>
+1099  <... close resumed>)              = 0
+1100  <... close resumed>)              = 0
+1099  write(1, "enter numbers (ctrl+D to finish)"..., 34 <unfinished ...>
+1100  close(5 <unfinished ...>
+1099  <... write resumed>)              = 34
+1100  <... close resumed>)              = 0
+1099  pselect6(6, [0 5], NULL, NULL, NULL, NULL <unfinished ...>
+1100  dup3(3, 0, 0)                     = 0
+1100  dup3(6, 2, 0)                     = 2
+1100  close(3)                          = 0
+1100  close(6)                          = 0
+1100  execve("./child", ["child", "result_linux.txt"], 0xffffd9153c98 /* 8 vars */) = 0
+1100  brk(NULL)                         = 0xaaaae715a000
+1100  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffa2cec000
+1100  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1100  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1100  fstat(3, {st_mode=S_IFREG|0644, st_size=8407, ...}) = 0
+1100  mmap(NULL, 8407, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffa2ce9000
+1100  close(3)                          = 0
+1100  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1100  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+1100  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+1100  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xffffa2ae5000
+1100  mmap(0xffffa2af0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffffa2af0000
+1100  munmap(0xffffa2ae5000, 45056)     = 0
+1100  munmap(0xffffa2cae000, 20368)     = 0
+1100  mprotect(0xffffa2c8a000, 77824, PROT_NONE) = 0
+1100  mmap(0xffffa2c9d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xffffa2c9d000
+1100  mmap(0xffffa2ca2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffa2ca2000
+1100  close(3)                          = 0
+1100  set_tid_address(0xffffa2cecfb0)   = 1100
+1100  set_robust_list(0xffffa2cecfc0, 24) = 0
+1100  rseq(0xffffa2ced600, 0x20, 0, 0xd428bc00) = 0
+1100  mprotect(0xffffa2c9d000, 12288, PROT_READ) = 0
+1100  mprotect(0xaaaaada4f000, 4096, PROT_READ) = 0
+1100  mprotect(0xffffa2cf1000, 8192, PROT_READ) = 0
+1100  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1100  munmap(0xffffa2ce9000, 8407)      = 0
+1100  getrandom("\x7f\xbd\x4f\x5e\xe5\xb5\x4e\x64", 8, GRND_NONBLOCK) = 8
+1100  brk(NULL)                         = 0xaaaae715a000
+1100  brk(0xaaaae717b000)               = 0xaaaae717b000
+1100  openat(AT_FDCWD, "result_linux.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+1100  fstat(0, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+1100  read(0,  <unfinished ...>
+1099  <... pselect6 resumed>)           = 1 (in [0])
+1099  read(0, "1", 1)                   = 1
+1099  read(0, "0", 1)                   = 1
+1099  read(0, "0", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "2", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "5", 1)                   = 1
+1099  read(0, "\n", 1)                  = 1
+1099  write(4, "100 2 5\n", 8)          = 8
+1100  <... read resumed>"100 2 5\n", 4096) = 8
+1099  pselect6(6, [0 5], NULL, NULL, NULL, NULL <unfinished ...>
+1100  fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+1100  read(0,  <unfinished ...>
+1099  <... pselect6 resumed>)           = 1 (in [0])
+1099  read(0, "8", 1)                   = 1
+1099  read(0, "1", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "3", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "3", 1)                   = 1
+1099  read(0, "\n", 1)                  = 1
+1099  write(4, "81 3 3\n", 7)           = 7
+1100  <... read resumed>"81 3 3\n", 4096) = 7
+1099  pselect6(6, [0 5], NULL, NULL, NULL, NULL <unfinished ...>
+1100  read(0,  <unfinished ...>
+1099  <... pselect6 resumed>)           = 1 (in [0])
+1099  read(0, "1", 1)                   = 1
+1099  read(0, "2", 1)                   = 1
+1099  read(0, "0", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "2", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "3", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "4", 1)                   = 1
+1099  read(0, "\n", 1)                  = 1
+1099  write(4, "120 2 3 4\n", 10)       = 10
+1100  <... read resumed>"120 2 3 4\n", 4096) = 10
+1099  pselect6(6, [0 5], NULL, NULL, NULL, NULL <unfinished ...>
+1100  read(0,  <unfinished ...>
+1099  <... pselect6 resumed>)           = 1 (in [0])
+1099  read(0, "5", 1)                   = 1
+1099  read(0, "0", 1)                   = 1
+1099  read(0, " ", 1)                   = 1
+1099  read(0, "2", 1)                   = 1
+1099  read(0, "\n", 1)                  = 1
+1099  write(4, "50 2\n", 5)             = 5
+1100  <... read resumed>"50 2\n", 4096) = 5
+1099  pselect6(6, [0 5], NULL, NULL, NULL, NULL <unfinished ...>
+1100  read(0,  <unfinished ...>
+1099  <... pselect6 resumed>)           = 1 (in [0])
+1099  read(0, "", 1)                    = 0
+1099  close(4)                          = 0
+1100  <... read resumed>"", 4096)       = 0
+1099  read(5,  <unfinished ...>
+1100  write(3, "10\n9\n5\n25\n", 10)    = 10
+1100  close(3)                          = 0
+1100  exit_group(0)                     = ?
+1099  <... read resumed>"", 256)        = 0
+1099  close(5 <unfinished ...>
+1100  +++ exited with 0 +++
+1099  <... close resumed>)              = 0
+1099  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1100, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+1099  wait4(1100, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1100
+1099  exit_group(0)                     = ?
+1099  +++ exited with 0 +++

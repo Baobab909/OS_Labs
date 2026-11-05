@@ -1,0 +1,7 @@
+.DS_Store
+cmake-build-*/
+lab2/parent
+lab2/child
+lab2/result*.txt
+lab2/zero.txt
+lab2/trace.txt
