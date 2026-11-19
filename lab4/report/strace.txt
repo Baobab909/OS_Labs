@@ -1,0 +1,162 @@
+1179  execve("./parent", ["./parent"], 0xfffff768aec8 /* 8 vars */) = 0
+1179  brk(NULL)                         = 0xaaaabbb5f000
+1179  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff9899a000
+1179  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1179  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1179  fstat(3, {st_mode=S_IFREG|0644, st_size=8408, ...}) = 0
+1179  mmap(NULL, 8408, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffff98997000
+1179  close(3)                          = 0
+1179  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1179  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+1179  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+1179  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xffff98793000
+1179  mmap(0xffff987a0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff987a0000
+1179  munmap(0xffff98793000, 53248)     = 0
+1179  munmap(0xffff9895e000, 12176)     = 0
+1179  mprotect(0xffff9893a000, 77824, PROT_NONE) = 0
+1179  mmap(0xffff9894d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xffff9894d000
+1179  mmap(0xffff98952000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffff98952000
+1179  close(3)                          = 0
+1179  set_tid_address(0xffff9899afb0)   = 1179
+1179  set_robust_list(0xffff9899afc0, 24) = 0
+1179  rseq(0xffff9899b600, 0x20, 0, 0xd428bc00) = 0
+1179  mprotect(0xffff9894d000, 12288, PROT_READ) = 0
+1179  mprotect(0xaaaab417f000, 4096, PROT_READ) = 0
+1179  mprotect(0xffff9899f000, 8192, PROT_READ) = 0
+1179  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1179  munmap(0xffff98997000, 8408)      = 0
+1179  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+1179  getrandom("\xcb\x77\x16\xc6\xd7\xfb\xa4\x77", 8, GRND_NONBLOCK) = 8
+1179  brk(NULL)                         = 0xaaaabbb5f000
+1179  brk(0xaaaabbb80000)               = 0xaaaabbb80000
+1179  write(1, "Enter output filename: ", 23) = 23
+1179  fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+1179  read(0, "result.txt\n", 1024)     = 11
+1179  openat(AT_FDCWD, "shared.dat", O_RDWR|O_CREAT|O_TRUNC, 0600) = 3
+1179  ftruncate(3, 4104)                = 0
+1179  mmap(NULL, 4104, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffff98998000
+1179  close(3)                          = 0
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.lab4_ready", 0) = -1 ENOENT (No such file or directory)
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.lab4_done", 0) = -1 ENOENT (No such file or directory)
+1179  getrandom("\x42\xcf\x51\xf1\xed\xac\xb4\x78", 8, GRND_NONBLOCK) = 8
+1179  newfstatat(AT_FDCWD, "/dev/shm/sem.UOrMhj", 0xfffffc1cd478, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+1179  openat(AT_FDCWD, "/dev/shm/sem.UOrMhj", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3
+1179  write(3, "\0\0\0\0\0\0\0\0\200\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 32) = 32
+1179  mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffff98997000
+1179  linkat(AT_FDCWD, "/dev/shm/sem.UOrMhj", AT_FDCWD, "/dev/shm/sem.lab4_ready", 0) = 0
+1179  fstat(3, {st_mode=S_IFREG|0600, st_size=32, ...}) = 0
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.UOrMhj", 0) = 0
+1179  close(3)                          = 0
+1179  getrandom("\x1c\x89\xe0\x3f\xe4\x2d\xd9\x6e", 8, GRND_NONBLOCK) = 8
+1179  newfstatat(AT_FDCWD, "/dev/shm/sem.g5A2D4", 0xfffffc1cd478, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+1179  openat(AT_FDCWD, "/dev/shm/sem.g5A2D4", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3
+1179  write(3, "\0\0\0\0\0\0\0\0\200\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 32) = 32
+1179  mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffff98996000
+1179  linkat(AT_FDCWD, "/dev/shm/sem.g5A2D4", AT_FDCWD, "/dev/shm/sem.lab4_done", 0) = 0
+1179  fstat(3, {st_mode=S_IFREG|0600, st_size=32, ...}) = 0
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.g5A2D4", 0) = 0
+1179  close(3)                          = 0
+1179  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xffff9899afb0) = 1180
+1179  getpid( <unfinished ...>
+1180  set_robust_list(0xffff9899afc0, 24 <unfinished ...>
+1179  <... getpid resumed>)             = 1179
+1180  <... set_robust_list resumed>)    = 0
+1179  write(1, "Parent PID: 1179\n", 17 <unfinished ...>
+1180  execve("./child", ["child", "result.txt"], 0xfffffc1ceab8 /* 8 vars */ <unfinished ...>
+1179  <... write resumed>)              = 17
+1179  write(1, "Child PID: 1180\n", 16) = 16
+1179  write(1, "Enter numbers (Ctrl+D to finish)"..., 34) = 34
+1179  read(0,  <unfinished ...>
+1180  <... execve resumed>)             = 0
+1180  brk(NULL)                         = 0xaaaae6d48000
+1180  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffbd810000
+1180  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1180  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1180  fstat(3, {st_mode=S_IFREG|0644, st_size=8408, ...}) = 0
+1180  mmap(NULL, 8408, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffbd80d000
+1180  close(3)                          = 0
+1180  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1180  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+1180  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+1180  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xffffbd609000
+1180  mmap(0xffffbd610000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffffbd610000
+1180  munmap(0xffffbd609000, 28672)     = 0
+1180  munmap(0xffffbd7ce000, 36752)     = 0
+1180  mprotect(0xffffbd7aa000, 77824, PROT_NONE) = 0
+1180  mmap(0xffffbd7bd000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xffffbd7bd000
+1180  mmap(0xffffbd7c2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffbd7c2000
+1180  close(3)                          = 0
+1180  set_tid_address(0xffffbd810fb0)   = 1180
+1180  set_robust_list(0xffffbd810fc0, 24) = 0
+1180  rseq(0xffffbd811600, 0x20, 0, 0xd428bc00) = 0
+1180  mprotect(0xffffbd7bd000, 12288, PROT_READ) = 0
+1180  mprotect(0xaaaabac1f000, 4096, PROT_READ) = 0
+1180  mprotect(0xffffbd815000, 8192, PROT_READ) = 0
+1180  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1180  munmap(0xffffbd80d000, 8408)      = 0
+1180  openat(AT_FDCWD, "shared.dat", O_RDWR) = 3
+1180  mmap(NULL, 4104, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffffbd80e000
+1180  close(3)                          = 0
+1180  openat(AT_FDCWD, "/dev/shm/sem.lab4_ready", O_RDWR|O_NOFOLLOW|O_CLOEXEC) = 3
+1180  fstat(3, {st_mode=S_IFREG|0600, st_size=32, ...}) = 0
+1180  getrandom("\xc0\xf3\xcb\x7c\xb3\xe3\x03\x6e", 8, GRND_NONBLOCK) = 8
+1180  brk(NULL)                         = 0xaaaae6d48000
+1180  brk(0xaaaae6d69000)               = 0xaaaae6d69000
+1180  mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffffbd80d000
+1180  close(3)                          = 0
+1180  openat(AT_FDCWD, "/dev/shm/sem.lab4_done", O_RDWR|O_NOFOLLOW|O_CLOEXEC) = 3
+1180  fstat(3, {st_mode=S_IFREG|0600, st_size=32, ...}) = 0
+1180  mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xffffbd80c000
+1180  close(3)                          = 0
+1180  openat(AT_FDCWD, "result.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 3
+1180  getpid()                          = 1180
+1180  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+1180  write(1, "Child started, PID: 1180\n", 25) = 25
+1180  futex(0xffffbd80d000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1179  <... read resumed>"100 2 5\n", 1024) = 8
+1179  futex(0xffff98997000, FUTEX_WAKE, 1) = 1
+1179  futex(0xffff98996000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1180  <... futex resumed>)              = 0
+1180  fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+1180  write(3, "10\n", 3)               = 3
+1180  futex(0xffffbd80c000, FUTEX_WAKE, 1 <unfinished ...>
+1179  <... futex resumed>)              = 0
+1180  <... futex resumed>)              = 1
+1179  write(1, "Enter numbers (Ctrl+D to finish)"..., 34 <unfinished ...>
+1180  futex(0xffffbd80d000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1179  <... write resumed>)              = 34
+1179  read(0, "80 2 4\n", 1024)         = 7
+1179  futex(0xffff98997000, FUTEX_WAKE, 1) = 1
+1180  <... futex resumed>)              = 0
+1179  futex(0xffff98996000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1180  write(3, "10\n", 3)               = 3
+1180  futex(0xffffbd80c000, FUTEX_WAKE, 1 <unfinished ...>
+1179  <... futex resumed>)              = 0
+1180  <... futex resumed>)              = 1
+1179  write(1, "Enter numbers (Ctrl+D to finish)"..., 34 <unfinished ...>
+1180  futex(0xffffbd80d000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1179  <... write resumed>)              = 34
+1179  read(0, "100 2 0\n", 1024)        = 8
+1179  futex(0xffff98997000, FUTEX_WAKE, 1) = 1
+1179  futex(0xffff98996000, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+1180  <... futex resumed>)              = 0
+1180  futex(0xffffbd80c000, FUTEX_WAKE, 1 <unfinished ...>
+1179  <... futex resumed>)              = 0
+1180  <... futex resumed>)              = 1
+1179  write(1, "Division by zero. Stopping.\n", 28 <unfinished ...>
+1180  close(3 <unfinished ...>
+1179  <... write resumed>)              = 28
+1179  kill(1180, SIGTERM)               = 0
+1179  wait4(1180,  <unfinished ...>
+1180  <... close resumed>)              = 0
+1180  --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=1179, si_uid=0} ---
+1180  +++ killed by SIGTERM +++
+1179  <... wait4 resumed>[{WIFSIGNALED(s) && WTERMSIG(s) == SIGTERM}], 0, NULL) = 1180
+1179  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=1180, si_uid=0, si_status=SIGTERM, si_utime=0, si_stime=0} ---
+1179  munmap(0xffff98997000, 32)        = 0
+1179  munmap(0xffff98996000, 32)        = 0
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.lab4_ready", 0) = 0
+1179  unlinkat(AT_FDCWD, "/dev/shm/sem.lab4_done", 0) = 0
+1179  munmap(0xffff98998000, 4104)      = 0
+1179  exit_group(1)                     = ?
+1179  +++ exited with 1 +++
