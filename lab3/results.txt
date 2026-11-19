@@ -1,0 +1,84 @@
+========== Matrix: 500, Threads: 1 ==========
+Matrix size: 500 x 500
+Iterations: 3
+Window size: 5
+Threads: 1
+Execution time: 0.072348 seconds
+Result sample: 50.0000
+========== Matrix: 500, Threads: 2 ==========
+Matrix size: 500 x 500
+Iterations: 3
+Window size: 5
+Threads: 2
+Execution time: 0.033146 seconds
+Result sample: 50.0000
+========== Matrix: 500, Threads: 4 ==========
+Matrix size: 500 x 500
+Iterations: 3
+Window size: 5
+Threads: 4
+Execution time: 0.022109 seconds
+Result sample: 50.0000
+========== Matrix: 500, Threads: 8 ==========
+Matrix size: 500 x 500
+Iterations: 3
+Window size: 5
+Threads: 8
+Execution time: 0.019300 seconds
+Result sample: 50.0000
+========== Matrix: 1000, Threads: 1 ==========
+Matrix size: 1000 x 1000
+Iterations: 3
+Window size: 5
+Threads: 1
+Execution time: 0.262171 seconds
+Result sample: 42.4000
+========== Matrix: 1000, Threads: 2 ==========
+Matrix size: 1000 x 1000
+Iterations: 3
+Window size: 5
+Threads: 2
+Execution time: 0.128295 seconds
+Result sample: 42.4000
+========== Matrix: 1000, Threads: 4 ==========
+Matrix size: 1000 x 1000
+Iterations: 3
+Window size: 5
+Threads: 4
+Execution time: 0.068538 seconds
+Result sample: 42.4000
+========== Matrix: 1000, Threads: 8 ==========
+Matrix size: 1000 x 1000
+Iterations: 3
+Window size: 5
+Threads: 8
+Execution time: 0.068999 seconds
+Result sample: 42.4000
+========== Matrix: 2000, Threads: 1 ==========
+Matrix size: 2000 x 2000
+Iterations: 3
+Window size: 5
+Threads: 1
+Execution time: 0.998616 seconds
+Result sample: 42.4000
+========== Matrix: 2000, Threads: 2 ==========
+Matrix size: 2000 x 2000
+Iterations: 3
+Window size: 5
+Threads: 2
+Execution time: 0.510556 seconds
+Result sample: 42.4000
+========== Matrix: 2000, Threads: 4 ==========
+Matrix size: 2000 x 2000
+Iterations: 3
+Window size: 5
+Threads: 4
+Execution time: 0.273332 seconds
+Result sample: 42.4000
+========== Matrix: 2000, Threads: 8 ==========
+Matrix size: 2000 x 2000
+Iterations: 3
+Window size: 5
+Threads: 8
+Execution time: 0.249735 seconds
+Result sample: 42.4000

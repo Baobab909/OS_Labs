@@ -1,0 +1,22 @@
+Проверка количества потоков средствами macOS
+
+Команда:
+./cmake-build-debug/lab3 5000 10 5 4 > /tmp/lab3_output.txt & pid=$!; sleep 1; ps -M -p "$pid"; wait "$pid"; cat /tmp/lab3_output.txt
+
+Результат ps -M:
+USER        PID   TT   %CPU STAT PRI     STIME     UTIME COMMAND
+margarita 57942 s002    0.6 S    31T   0:00.02   0:00.05 ./cmake-build-debug/lab3 5000 10 5 4
+          57942        65.3 R    31T   0:00.01   0:00.30
+          57942        66.6 R    31T   0:00.01   0:00.31
+          57942        67.5 R    31T   0:00.00   0:00.31
+          57942        67.0 R    31T   0:00.00   0:00.31
+
+Всего: 5 потоков, включая основной и 4 рабочих.
+
+Результат программы:
+Matrix size: 5000 x 5000
+Iterations: 10
+Window size: 5
+Threads: 4
+Execution time: 5.759918 seconds
+Result sample: 45.6124
